@@ -4,7 +4,7 @@ namespace FizzBuzzGit
 	public class FizzBuzz
 	{
 
-        Dictionary<int, string> conditions = new Dictionary<int, string>()
+        private static Dictionary<int, string> conditions = new Dictionary<int, string>()
         {
             {3, "Fizz"},
             {5, "Buzz"},
