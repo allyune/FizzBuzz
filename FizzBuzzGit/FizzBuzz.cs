@@ -1,24 +1,26 @@
 ﻿using System;
 namespace FizzBuzzGit
 {
-	public class FizzBuzz
-	{
-        private static readonly string _divisibleByThreeStr = "Fizz";
-        private static readonly string _divisibleByFiveStr = "Buzz";
-        private static readonly string _divisibleBySevenStr = "Whizz";
-        private static readonly string _divisibleByElevenStr = "Bang";
+    public class FizzBuzz
+    {
+        private readonly FizzBuzzParameters _parameters;
+        private readonly Dictionary<int, string> _conditions;
 
-        private static Dictionary<int, string> conditions = new Dictionary<int, string>()
+        public FizzBuzz(FizzBuzzParameters parameters)
         {
-            {3, _divisibleByThreeStr},
-            {5, _divisibleByFiveStr},
-            {7, _divisibleBySevenStr},
-            {11, _divisibleByElevenStr}
-        };
-
-        public static string GenerateFizzBuzz(int num)
+            _parameters = parameters;
+            _conditions = new Dictionary<int, string>()
+            {
+                { 3, _parameters.divisibleByThreeStr },
+                { 5, _parameters.divisibleByFiveStr },
+                { 7, _parameters.divisibleBySevenStr },
+                { 11, _parameters.divisibleByElevenStr }
+            };
+        }
+      
+        public string GenerateFizzBuzz(int num)
         {
-            var result = conditions
+            var result = _conditions
                 .Where(cond => num % cond.Key == 0)
                 .Select(cond => cond.Value)
                 .ToArray();
@@ -27,11 +29,11 @@ namespace FizzBuzzGit
             return String.Join("", result);
         }
 
-        public static void PrintFizzBuzz()
+        public void PrintFizzBuzz()
 		{
 			for (int i = 1; i <= 100; i++)
 			{
-				Console.WriteLine(FizzBuzz.GenerateFizzBuzz(i));
+				Console.WriteLine(GenerateFizzBuzz(i));
 			}
 		}
 	}
