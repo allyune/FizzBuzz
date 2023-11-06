@@ -3,13 +3,17 @@ namespace FizzBuzzGit
 {
 	public class FizzBuzz
 	{
+        private static readonly string _divisibleByThreeStr = "Fizz";
+        private static readonly string _divisibleByFiveStr = "Buzz";
+        private static readonly string _divisibleBySevenStr = "Whizz";
+        private static readonly string _divisibleByElevenStr = "Bang";
 
         private static Dictionary<int, string> conditions = new Dictionary<int, string>()
         {
-            {3, "Fizz"},
-            {5, "Buzz"},
-            {7, "Whizz"},
-            {11, "Bang"}
+            {3, _divisibleByThreeStr},
+            {5, _divisibleByFiveStr},
+            {7, _divisibleBySevenStr},
+            {11, _divisibleByElevenStr}
         };
 
         public static string GenerateFizzBuzz(int num)
