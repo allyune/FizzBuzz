@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 25.0.1706.5
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FizzBuzzGit", "FizzBuzzGit.csproj", "{92FC282D-5D39-44F6-8C9F-4C47B9898281}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FizzBuzzGitTest", "..\FizzBuzzGitTest\FizzBuzzGitTest.csproj", "{B13DB3AC-94F8-4DD1-91E8-992FD1FA29CF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{6413784A-E51A-4078-BB66-D623E0B9D753}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{92FC282D-5D39-44F6-8C9F-4C47B9898281}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92FC282D-5D39-44F6-8C9F-4C47B9898281}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92FC282D-5D39-44F6-8C9F-4C47B9898281}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92FC282D-5D39-44F6-8C9F-4C47B9898281}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B13DB3AC-94F8-4DD1-91E8-992FD1FA29CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B13DB3AC-94F8-4DD1-91E8-992FD1FA29CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B13DB3AC-94F8-4DD1-91E8-992FD1FA29CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B13DB3AC-94F8-4DD1-91E8-992FD1FA29CF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C0A03494-1266-4222-892E-02089286BD8D}
+	EndGlobalSection
+EndGlobal
