@@ -13,20 +13,17 @@ namespace FizzBuzzGit
         };
 
         public static string GenerateFizzBuzz(int num)
-		{
-			string res = String.Empty;
-			if (num % 3 == 0)
-				res += "Fizz";
-			if (num % 5 == 0)
-				res += "Buzz";
-			if (res.Length == 0)
-			{
-				return num.ToString();
-			}
-			return res;
-		}
+        {
+            var result = conditions
+                .Where(cond => num % cond.Key == 0)
+                .Select(cond => cond.Value)
+                .ToArray();
+            if (result.Length == 0)
+                return num.ToString();
+            return String.Join("", result);
+        }
 
-		public static void PrintFizzBuzz()
+        public static void PrintFizzBuzz()
 		{
 			for (int i = 1; i <= 100; i++)
 			{
