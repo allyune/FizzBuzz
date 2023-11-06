@@ -1,5 +1,5 @@
 ﻿using System;
-namespace FizzBuzzGit
+namespace FizzBuzzGit;
 
     public class FizzBuzz
     {
@@ -37,5 +37,3 @@ namespace FizzBuzzGit
 			}
 		}
 	}
-}
-
