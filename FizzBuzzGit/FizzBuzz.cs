@@ -1,20 +1,26 @@
 ﻿using System;
 namespace FizzBuzzGit
-{
-	public class FizzBuzz
-	{
 
-        private static Dictionary<int, string> conditions = new Dictionary<int, string>()
-        {
-            {3, "Fizz"},
-            {5, "Buzz"},
-            {7, "Whizz"},
-            {11, "Bang"}
-        };
+    public class FizzBuzz
+    {
+        private readonly FizzBuzzParameters _parameters;
+        private readonly Dictionary<int, string> _conditions;
 
-        public static string GenerateFizzBuzz(int num)
+        public FizzBuzz(FizzBuzzParameters parameters)
         {
-            var result = conditions
+            _parameters = parameters;
+            _conditions = new Dictionary<int, string>()
+            {
+                { 3, _parameters.divisibleByThreeStr },
+                { 5, _parameters.divisibleByFiveStr },
+                { 7, _parameters.divisibleBySevenStr },
+                { 11, _parameters.divisibleByElevenStr }
+            };
+        }
+      
+        public string GenerateFizzBuzz(int num)
+        {
+            var result = _conditions
                 .Where(cond => num % cond.Key == 0)
                 .Select(cond => cond.Value)
                 .ToArray();
@@ -23,11 +29,11 @@ namespace FizzBuzzGit
             return String.Join("", result);
         }
 
-        public static void PrintFizzBuzz()
+        public void PrintFizzBuzz()
 		{
 			for (int i = 1; i <= 100; i++)
 			{
-				Console.WriteLine(FizzBuzz.GenerateFizzBuzz(i));
+				Console.WriteLine(GenerateFizzBuzz(i));
 			}
 		}
 	}
