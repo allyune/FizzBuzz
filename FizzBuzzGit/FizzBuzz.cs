@@ -17,7 +17,7 @@ namespace FizzBuzzGit
                 { 11, _parameters.divisibleByElevenStr }
             };
         }
-      
+
         public string GenerateFizzBuzz(int num)
         {
             var result = _conditions
@@ -30,12 +30,12 @@ namespace FizzBuzzGit
         }
 
         public void PrintFizzBuzz()
-		{
-			for (int i = 1; i <= 100; i++)
-			{
-				Console.WriteLine(GenerateFizzBuzz(i));
-			}
-		}
-	}
-}
+        {
+            for (int i = 1; i <= 100; i++)
+            {
+                Console.WriteLine(GenerateFizzBuzz(i));
+            }
+        }
 
+    }
+}
